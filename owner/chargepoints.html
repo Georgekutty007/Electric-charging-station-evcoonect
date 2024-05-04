@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+
+
+<body>
+	<div id="mySidenav" class="sidenav">
+        <p class="logo" style="display: flex;align-items: center;"><span><img src="logo1.png" style="height: 70px;"></span> EVConnect</p>
+  <a href="ownerdash.html" class="icon-a a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
+  <a href="chargepoints.html"class="icon-a c"><i class="fa fa-list icons"></i> &nbsp;&nbsp;Chargepoints</a>
+  <a href="reports.html"class="icon-a d"><i class="fa fa-exclamation icons"></i> &nbsp;&nbsp;Reports</a>
+  <a href="addadmincharge.html"class="icon-a d"><i class="fa fa-plus-square-o icons"></i> &nbsp;&nbsp;Add Chargepoints</a>
+  <a href="../main.html" class="icon-a"><i class="fa fa-sign-out icons"></i> &nbsp;&nbsp;logout</a>
+</div>
+<div id="main">
+
+	<div class="head">
+		<div class="col-div-6">
+<span style="font-size:30px;cursor:pointer; color: black;" class="nav"  >&#9776; chargepoints</span>
+<span style="font-size:30px;cursor:pointer; color: black;" class="nav2"  >&#9776; chargepoints</span>
+</div>
+	
+	<div class="col-div-6">
+	<div class="profile">
+		<img src="images/user.png" class="pro-img" />
+    <div style="display: flex;flex-direction: column;justify-items:  center;">		<p class="profile-name" style="padding: 0;margin: 0;"></p>
+      <span>OWNER</span></div>
+	</div>
+</div>
+	<div class="clearfix"></div>
+</div>
+
+<!-----------reported chargepoint-------------->
+<div class="chargepoints">
+	<table class="chargepoints-table">
+		<tr >
+			<th style="border: 1px solid grey;text-align: center;">PointID</th>
+			<th style="border: 1px solid grey;text-align: center;">Name</th>
+			<th style="border: 1px solid grey;text-align: center;">State</th>
+			<th style="border: 1px solid grey;text-align: center;">City</th>
+			<th style="border: 1px solid grey;text-align: center;">Rating</th>
+			<th style="border: 1px solid grey;text-align: center;">Report count</th>
+			<th style="border: 1px solid grey;text-align: center;">Reports</th>
+			<th style="border: 1px solid grey;text-align: center;">Delete</th>
+		  </tr>
+	</table>
+</div>
+</div>
+</body>
+<script>
+		let phno=localStorage.getItem('phno');
+        let user = localStorage.getItem('user');
+console.log(user);
+document.querySelector('.profile-name').innerHTML=user;
+    const table=document.querySelector('.chargepoints-table');
+   fetch('../location.json?' + Date.now())
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(location => {
+		if(location.ownerName==user){
+			console.log(user)
+			const tr=document.createElement('tr');
+tr.innerHTML=`<td>${location.id}</td><td>${location.name}</td><td>${location.state}</td><td>${location.city}</td><td>${location.address}</td><td>${location.rating}</td><td>${location.responses}</td><td><span style="width:100%;text-align:center;cursor:pointer;" onclick="removebyreport('${location.id}')" class="material-symbols-outlined">
+                    delete
+                    </span></td>`;
+
+table.appendChild(tr);
+		}
+	})
+})
+
+
+
+function removebyreport(idToRemove){
+console.log('try')
+document.cookie = "idToRemove=" + encodeURIComponent(idToRemove);
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+	// Do something with the response
+  }
+};
+xhttp.open("POST", "removebyowner.php", true);
+xhttp.send();
+
+setTimeout(()=>{
+	window.location.href = 'chargepoints.html';
+},200)
+}
+
+</script>
+</html>

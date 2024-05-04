@@ -1,0 +1,24 @@
+[
+    {
+        "name": "St Mary's Electricals",
+        "address": "Muvattupuzha - Pandappilly - Koothattukulam Road, Kizhakkekara, Moozhi, Muvattupuzha, Ernakulam District, Kerala, 686677, India",
+        "city": "MOOZHI",
+        "state": "Kerala",
+        "lattitude": 9.93774031266,
+        "longitude": 76.59873962402344,
+        "chargeType": "CCS1",
+        "ownerName": "",
+        "ownerPhone": ""
+    },
+    {
+        "name": "St mary's traders",
+        "address": "Muvattupuzha - Pandappilly - Koothattukulam Road, Kizhakkekara, Moozhi, Muvattupuzha, Ernakulam District, Kerala, 686677, India",
+        "city": "MOOZHI",
+        "state": "Kerala",
+        "lattitude": 9.937698041220688,
+        "longitude": 76.59886837005617,
+        "chargeType": "CCS1",
+        "ownerName": "",
+        "ownerPhone": ""
+    }
+]

@@ -1,0 +1,30 @@
+{
+    "plugs": [
+        {
+            "name": "Type 1",
+            "description": "Used in North America and some other countries, with a maximum charging power of 7.4 kW.",
+            "image": "type1.png"
+        },
+        {
+            "name": "Type 2",
+            "description": "Used in Europe, with a maximum charging power of 22 kW.",
+            "image": "type2.png"
+        },
+        {
+            "name": "CCS",
+            "description": "Combined Charging System, used in North America and Europe, with a maximum charging power of 350 kW.",
+            "image": "ccs.png"
+        },
+        {
+            "name": "CHAdeMO",
+            "description": "Used in Japan and some other countries, with a maximum charging power of 62.5 kW.",
+            "image": "chademo.png"
+        },
+        {
+            "name": "Tesla Supercharger",
+            "description": "Used by Tesla vehicles, with a maximum charging power of 250 kW.",
+            "image": "supercharger.png"
+        }
+       
+    ]
+}

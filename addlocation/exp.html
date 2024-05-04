@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Displaying JSON data as cards</title>
+  </head>
+  <body>
+    <div id="card-container"></div>
+
+    <script>
+      fetch("data.json")
+        .then(response => response.json())
+        .then(data => {
+          const cardContainer = document.getElementById("card-container");
+
+          // Loop through the data and create a card for each item
+          data.forEach(item => {
+            const card = document.createElement("div");
+            card.className = "card";
+
+            const name = document.createElement("h2");
+            name.textContent = item.name;
+            card.appendChild(name);
+            const latitude = document.createElement("p");
+            latitude.textContent = "Latitude: " + item.latitude;
+            card.appendChild(latitude);
+
+            const longitude = document.createElement("p");
+            longitude.textContent = "Longitude: " + item.longitude;
+            card.appendChild(longitude);
+
+            cardContainer.appendChild(card);
+          });
+        })
+        .catch(error => console.error(error));
+    </script>
+  </body>
+</html>

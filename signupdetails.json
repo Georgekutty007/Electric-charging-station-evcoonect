@@ -1,0 +1,121 @@
+[
+    {
+        "user": "admin12345#",
+        "password": "admin12345#"
+    },
+    {
+        "user": "kseb",
+        "phone": "1234567890",
+        "password": "kkkkk12345",
+        "usertype": "owner"
+    },
+    {
+        "user": "Akshay",
+        "phone": "9812345678",
+        "password": "aaaaa12345",
+        "usertype": "normal",
+        "favorites": [
+            "2258",
+            "2259"
+        ],
+        "reports": [
+            {
+                "pointId": "1959",
+                "report": "Station Doesn't Exsist",
+                "date": "2024-03-18"
+            },
+            {
+                "pointId": "1959",
+                "report": "Slow",
+                "date": "2024-03-18"
+            },
+            {
+                "pointId": "1804",
+                "report": "Station Occupied",
+                "date": "2024-03-18"
+            }
+        ],
+        "notifications": [
+            {
+                "notification": "thanks for reporting 1959",
+                "date": "2024-03-18"
+            },
+            {
+                "notification": "thanks for reporting 1804",
+                "date": "2024-03-18"
+            }
+        ],
+        "report_count": 3
+    },
+    {
+        "user": "akshay12",
+        "phone": "9412344556",
+        "password": "aaaaa12345",
+        "usertype": "normal",
+        "favorites": [
+            "2103"
+        ],
+        "reports": [
+            {
+                "pointId": "1111",
+                "report": "Defective",
+                "date": "2024-03-24"
+            },
+            {
+                "pointId": "2261",
+                "report": "Station Doesn't Exsist",
+                "date": "2024-03-24"
+            },
+            {
+                "pointId": "2260",
+                "report": "Slow",
+                "date": "2024-03-24"
+            }
+        ],
+        "notifications": [
+            {
+                "notification": "thanks for reporting 1111",
+                "date": "2024-03-24"
+            },
+            {
+                "notification": "thanks for reporting 2261",
+                "date": "2024-03-24"
+            },
+            {
+                "notification": "Removed the chargepoint you have reported2261",
+                "date": "2024-03-24"
+            },
+            {
+                "notification": "thanks for reporting 2260",
+                "date": "2024-03-24"
+            },
+            {
+                "notification": "Removed the chargepoint you have reported2260",
+                "date": "2024-03-24"
+            }
+        ],
+        "report_count": 3
+    },
+    {
+        "user": "Ownerakshay",
+        "phone": "1234567890",
+        "password": "aaaaa12345",
+        "usertype": "owner"
+    },
+    {
+        "user": "geo",
+        "phone": "7891023456",
+        "password": "qwerty12345",
+        "usertype": "normal",
+        "favorites": [
+            "2262",
+            "245"
+        ]
+    },
+    {
+        "user": "george",
+        "phone": "456789123",
+        "password": "abcdef12345",
+        "usertype": "owner"
+    }
+]

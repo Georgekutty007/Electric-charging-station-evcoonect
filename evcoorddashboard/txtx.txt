@@ -1,0 +1,36 @@
+	<div class="searchbox">
+		<div class="searchbar">
+			<input type="text">
+			<button>SEARCH</button>
+		</div>
+		<div class="result"></div>
+	</div>
+
+    const result=document.querySelector('.result');
+function search(){
+	const id=document.getElementById('searchid').value;
+	console.log(id);
+
+	fetch('location.json?' + Date.now())
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(location => {
+		if(location.id==id){
+			result.innerHTML=`<h2>${location.name}</h2>
+		<h3>State :${location.state}</h3>
+		<h3>City :${location.city}</h3>
+		<h3>Address :${location.address}</h3>
+		<h3>Rating :${location.rating}</h3>
+		<h3>Responses :${location.responses}</h3>
+		`;
+		location.reports.forEach(report => {
+         const
+		})
+		
+		}
+
+
+	})
+  })
+	
+}
